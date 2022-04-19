@@ -23,3 +23,9 @@ td {
     border: 1px solid black;
     padding: 8px;
 }
+
+td ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 24px;
+}
