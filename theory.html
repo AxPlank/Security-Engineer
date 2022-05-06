@@ -723,7 +723,7 @@
                     </p>
                 </div>
             </div>
-            <h3>3. 주요 암호기술에 대한 개괄</h3>
+            <h2>3. 주요 암호기술에 대한 개괄</h2>
             <div>
                 <div>
                     <p>
@@ -780,7 +780,7 @@
                     </p>
                 </div>
             </div>
-            <h3>4. 암호 분석(암호 해독)</h3>
+            <h2>4. 암호 분석(암호 해독)</h2>
             <div>
                 <div>
                     <p>
@@ -843,7 +843,7 @@
                     </p>
                 </div>
             </div>
-            <h3>5. 암호 알고리즘의 안정성 평가</h3>
+            <h2>5. 암호 알고리즘의 안정성 평가</h2>
             <div>
                 <div>
                     <p>
@@ -871,6 +871,155 @@
                             <li>하지만 CC에서는 암호 알고리즘과 암호 모듈에 대한 평가기준을 명시하지 않았기에, 이 부분들에 대한 평가는 각 국가별로 진행을 해야 한다. 이때 가장 많이 참조되는 것이 미국 NIST가 수행하는 CMVP(Cryptographic Module Validation Program)이다.</li>
                         </ul>
                     </p>
+                    <img src="image/SEC2-Fig1.png">
+                    <p>
+                        암호기술 평가
+                        <br>응용시스템의 안정성을 평가하는 것이 바람직함. 하지만 평기기준, 방법, 체계를 마련하고, 탑재된 기술을 평가하는 데 한계가 있다는 문제가 있기 때문에 암호 알고리즘에 대한 안정성 평가가 우선되어야 함.
+                        <ol>
+                            평가 과정
+                            <li>암호 알고리즘에 대한 이론적 안정성 평가</li>
+                            <li>검증된 암호모듈에 탑재한 정보보호 제품의 안정성 평가</li>
+                            <li>각각의 제품으로 구성된 응용시스템의 안정성 평가</li>
+                        </ol>
+                        <ul>
+                            평가 종류
+                            <li>
+                                <dl>
+                                    <dt>암호 알고리즘 평가</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>정보보호제품에 탑재된 암호 알고리즘에 대한 안정성 평가이다.</li>
+                                            <li>알고리즘 자체만을 평가하며, 일반적으로는 알고리즘 자체의 이론적 안정성만을 평가한다.</li>
+                                            <li>탑재된 제품이나 시스템과 독립적인 평가가 가능하다.</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>암호모듈 평가</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>기밀성, 무결성 기능 모듈과 같이 암호 알고리즘을 이용하여 제공되는 암호서비스들에 대한 안정성 평가이다.</li>
+                                            <li>암호서비스 기능을 제공하는 암호모듈의 안정성에 대한 평가이다. 일종의 블랙박스 테스트라 생각하면 될 것 같다.</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>정보보호제품 평가</dt>
+                                    <dd>암호모듈을 탑해한 정보보호 제품에 대한 안정성 평가이다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>응용시스템 평가</dt>
+                                    <dd>각각의 정보보호 제품을 상호 연동하여 구성되는 시스템에 대한 안정성 평가를 말한다.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>CMVP</dt>
+                            <dd>NIST와 CSE가 공동으로 개발한 암호 모듈의 안정성 검증을 위한 프로그램</dd>
+                        </dl>
+                        CMVP에서의 안정성 요구항목
+                        <ul>
+                            <li>암호기술의 구현 적합성</li>
+                            <li>암호키 운용 및 관리</li>
+                            <li>물리적 보안</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <h2>6. 지적 재산권 보호</h2>
+            <div>
+                <div>
+                    <h3>디지털 저작권 관리</h3>
+                    <p>
+                        <dl>
+                            <dt>Steganography: 최초의 암호 유형</dt>
+                            <dd>
+                                <ul>
+                                    <li>메시지의 내용을 특정 매체에 숨기는 방식임. 내용을 감춘다는 표현이 적절할 듯</li>
+                                    <li>테러리스트들이 애용하는 방식 중 하나. 그림 같은 것에다가 조그맣게 메시지 적어두고 하면, 누가 알아보겠음?ㅋ</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>Digital Watermarking</dt>
+                            <dl>
+                                <ul>
+                                    <li>우리가 군대에서 "상사 ~"로 미친듯이 봤던 그거 맞음</li>
+                                    <li>원본을 왜곡하지 않는 정도나 혹은 사용자가 인식하지 못하는 선에서 저작권 정보를 삽입하는 방식임</li>
+                                    <li>강한(강성) 워터마킹, 약한(연성) 워터마킹으로 분류되는데 워터마킹이 약할수록 공격을 받았을 때, 파괴나 손상이 쉽게 발생한다구</li>
+                                </ul>
+                            </dl>
+                        </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>Fingerprinting</dt>
+                            <dd>
+                                <ul>
+                                    <li>디지털 콘텐츠에 대한 가치교환이 발생할 때, 이 컨텐츠를 구매하는 구매자의 정보를 삽입하는 것을 말함</li>
+                                    <li>이를 이용해 최초 유포자에 대해 추적할 수 있기 때문에 불법 복제, 유포와 같은 것들에 대한 추적이 가능함</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <table style="width:50%;">
+                        <thead>
+                            <tr>
+                                <td style="width: 19%;">항목</td>
+                                <td style="width: 27%;">Steganography</td>
+                                <td style="width: 27%;">Digital Watermarking</td>
+                                <td style="width: 27%;">Fingerprinting</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width: 19%;">은닉정보</td>
+                                <td style="width: 27%;">메시지</td>
+                                <td style="width: 27%;">판매자 정보</td>
+                                <td style="width: 27%;">구매자 정보</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 19%;">관심</td>
+                                <td style="width: 27%;">은닉메시지 검출</td>
+                                <td style="width: 27%;">저작권 표시</td>
+                                <td style="width: 27%;">구매자 추척</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 19%;">트래킹</td>
+                                <td style="width: 27%;">불가능</td>
+                                <td style="width: 27%;">가능</td>
+                                <td style="width: 27%;">가능</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 19%;">불법예방 효과</td>
+                                <td style="width: 27%;">낮음</td>
+                                <td style="width: 27%;">보통</td>
+                                <td style="width: 27%;">높음</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 19%;">저작권증명 효과</td>
+                                <td style="width: 27%;">낮음</td>
+                                <td style="width: 27%;">보통</td>
+                                <td style="width: 27%;">높음</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 19%;">항목</td>
+                                <td style="width: 27%;">Steganography</td>
+                                <td style="width: 27%;">Digital Watermarking</td>
+                                <td style="width: 27%;">Fingerprinting</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <span><a href="#INDEXX">목차로 돌아가기</a></span>
