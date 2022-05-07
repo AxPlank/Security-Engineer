@@ -38,3 +38,11 @@ td ul {
 a {
     color: black;
 }
+
+.width-33 {
+    width: 33%;
+}
+
+.width-40 {
+    width: 40%;
+}
