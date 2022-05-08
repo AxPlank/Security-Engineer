@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>정보보안기사 이론 정리</title>
+        <link rel="stylesheet" href="cssfile.css">
+    </head>
+    <body>
+        <section id="INDEXX" class="INDEXXX">
+            <h1 align="center">정보보안기사 이론 정리</h1>
+            각 섹션 바로가기. 각 챕터를 클릭하면 원하시는 챕터로 이동할 수 있습니다.
+            <ol>
+                <li><a href="theory-sec1.html">정보보호관리의 개념</a></li>
+                <li><a href="theory-sec2.html">암호학 개요</a></li>
+                <li><a href="theory-sec3.html">대칭키 암호</a></li>
+            </ol>
+        </section>
+
+        <section>
+            <h1 id="SECTION3">SECTION 3. 대칭키 암호</h1>
+            <h2>1. 현대 대칭키 암호</h2>
+            <div>
+                <div>
+                    <h3>현대 블록 암호</h3>
+                    <p>
+                        개요와 구성요소
+                        <dl>
+                            <dt>개요</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt>확산과 혼돈</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>
+                                                        <dl>
+                                                            <dt>diffusion</dt>
+                                                            <dd>평문의 통계적 성질을 암호문 전반에 퍼뜨려 숨기는 것을 말한다. 암호화 알고리즘에 대해 추측하는 것을 어렵게 하는 성질이다.</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <dl>
+                                                            <dt>confusion</dt>
+                                                            <dd>암호문과 키의 상관관계를 숨기는 것을 말한다. 암호문을 이용해 평문의 내용을 예측하기 힘들게 한다.</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>현대 블록 암호는 이 성질들을 만족시키기 위해 P-box와 S-box, XOR 연산, shift, split, swap 등의 요소를 결합하여 설계된다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>P-box</dt>
+                            <dd>
+                                <ul>
+                                    <li>고전 전치 암호를 병렬적으로 수행하는 전치 요소를 P-box라고 한다. 평문에 대해 문자 단위로 암호화하는 역할을 수행한다.</li>
+                                    <li>straight P-box, expansion P-box, compression P-box 3 가지가 존재한다.</li>
+                                    <li>
+                                        <dl>
+                                            <dt>compression P-box</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>입력 비트가 출력 비트보다 많은 P-box를 말한다.</li>
+                                                    <li>입력 비트 중 일부는 소실되어 출력되지 않으며, 이를 이용해 다음 단계에서 입력되는 비트의 수를 줄이고자 할 때 사용된다.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>expansion P-box</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>입력 비트가 출력 비트보다 적은 P-box를 말한다.</li>
+                                                    <li>입력 비트는 한 개 이상의 출력 비트와 연결되며, 다음 단계에서 입력 비트의 양을 증가시키고자 할 때 사용된다.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>역함수</dt>
+                                            <dd>straight P-box는 역함수가 존재하지만, 나머지 P-box는 역함수가 존재하지 않는다. 대응 형태의 차이로 보인다.</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <p>
+                        S-box
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
