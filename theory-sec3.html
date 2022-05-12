@@ -92,8 +92,96 @@
                         </dl>
                     </p>
                     <p>
-                        S-box
+                        <dl>
+                            <dt>S-box</dt>
+                            <dd>
+                                <ul>
+                                    <li>치환 암호의 역할을 하는 요소를 S-box라고 한다.</li>
+                                    <li>치환 암호의 역할을 하지만 입력 비트의 수가 출력 비트의 수와 달라도 상관이 없다.</li>
+                                    <li>P-box와 마찬가지로 역함수가 존재할 수도, 존재하지 않을 수도 있다. 만약 존재한다면, 역시 P-box와 동일하게 입력 비트의 수와 출력 비트의 수와 같을 것이다.</li>
+                                    <li>S-box는 Subtitution, Exclusive-OR, Shift, Swap, Split, Combine 등으로 이뤄져 있다.</li>
+                                </ul>
+                            </dd>
+                            <figure>
+                                <img src="image/SEC3-Fig1.png">
+                                <figcaption>S-box의 구성요소</figcaption>
+                            </figure>
+                        </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>Product Chipers(합성 암호)</dt>
+                            <dd>
+                                <ul>
+                                    <li>치환, 전치 등의 요소를 결합해 만든 복합적인 암호를 합성 암호라 한다.</li>
+                                    <li>Shannon이 도입한 확산과 혼돈의 성질이 합성 암호의 주요 개념이며, 이 암호는 이 성질들을 갖도록 만들어져야 한다.</li>
+                                    <li>합성 암호는 확산이란 개념에 의해 암호문과 평문 사이의 관계가 숨겨질 것이며, 혼돈이라는 개념에 의해 암호문과 키의 관계가 숨겨질 것이다.</li>
+                                    <li>합성 암호는 여러 개가 중첩되어 반복되는 혀애로 사용되기도 한다. 이때 하나의 합성 암호가 진행되는 과정을 라운드라 하며, 라운드의 수는 합성 암호가 중첩된 수로 간주할 수 있다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>Feistel</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt>Feistel 구조</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>앞서 합성 암호의 라운드에 대한 개념을 간단하게 확인했었다. Feistel 구조는 라운드가 3개 이상으로 이뤄져 있으며, 라운드의 수는 짝수이다.</li>
+                                                    <li>현재까지 구조적인 문제점이 발견되지 않았으며, 수행속도가 빠르고 HW, SW에서의 구현이 용이하다는 장점이 있다.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>Feistel 진행방식</dt>
+                                            <dd>
+                                                Feistel 구조의 진행방식은 암호화, 복호화 과정이 모두 동일하다.
+                                                <ol>
+                                                    <li>입력값을 좌우 블록을 분할한다.</li>
+                                                    <li>두 블록 중 하나에 라운드 함수를 적용시킨 후, 이것을 다른 블록에 적용시키고, 좌우 블록을 서로 교환한다.</li>
+                                                    <li>이것을 각 라운드마다 실시한다.</li>
+                                                </ol>
+                                            </dd>
+                                            <dd>
 
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>Feistel 암호</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li>Feistel 구조 이용해 만든 암호를 Feistel 암호라 한다.</li>
+                                                    <li>평문 블록의 길이, 키의 길이, 라운드의 수에 의해 Feistel 암호의 강도가 결정된다. 이때 충분한 안정성을 보장받기 위해서는 평문 블록의 길이는 64bit 이상, 128bit의 키 길이, 16라운드 이상이어야 한다.</li>
+                                                    <li>Feistel 암호는 많은 블록 암호 알고리즘에서 이용되고 있다. 대표적으로 AES선정 당시 남은 5개의 후보 중 MARS, RC6, Twofish에서 Feistel 암호가 적용되었다.</li>
+                                                </ul>
+                                            </dd>
+                                            <figure>
+                                                <img src="image/SEC3-Fig2.png" style="width: 30%;">
+                                                <figcaption>Feistel 암호의 구조와 암호화, 복호화 진행방식</figcaption>
+                                            </figure>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>SPN</dt>
+                            <dd>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </dd>
+                        </dl>
                     </p>
                 </div>
             </div>
