@@ -46,3 +46,8 @@ a {
 .width-40 {
     width: 40%;
 }
+
+figcaption {
+    font: 12px black;
+    font-weight: inherit;
+}

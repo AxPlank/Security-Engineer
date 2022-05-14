@@ -156,6 +156,10 @@
                                     <li>
                                         <dl>
                                             <dt>Feistel 암호</dt>
+                                            <figure>
+                                                <img src="image/SEC3-Fig2.png" style="width: 30%;">
+                                                <figcaption>Feistel 암호의 구조와 암호화, 복호화 진행방식</figcaption>
+                                            </figure>
                                             <dd>
                                                 <ul>
                                                     <li>Feistel 구조 이용해 만든 암호를 Feistel 암호라 한다.</li>
@@ -163,10 +167,6 @@
                                                     <li>Feistel 암호는 많은 블록 암호 알고리즘에서 이용되고 있다. 대표적으로 AES선정 당시 남은 5개의 후보 중 MARS, RC6, Twofish에서 Feistel 암호가 적용되었다.</li>
                                                 </ul>
                                             </dd>
-                                            <figure>
-                                                <img src="image/SEC3-Fig2.png" style="width: 30%;">
-                                                <figcaption>Feistel 암호의 구조와 암호화, 복호화 진행방식</figcaption>
-                                            </figure>
                                         </dl>
                                     </li>
                                 </ul>
@@ -177,11 +177,92 @@
                         <dl>
                             <dt>SPN</dt>
                             <dd>
+                                <figure>
+                                    <img src="image/SEC3-Fig3.png" style="width: 30%;">
+                                    <figcaption>SPN구조</figcaption>
+                                </figure>
                                 <ul>
-                                    <li></li>
+                                    <li>고전 암호의 일정인 Subtitution Chiper와 Permutation Chiper를 중첩하여 만든 것으로, "여러 암호를 중첩하는 것이 개별 함수로 이루어진 암호보다 안전하다"라는 샤넌의 이론에 근거하여 개발된 것이다.</li>
+                                    <li>
+                                        진행 과정
+                                        <ol>
+                                            <li>입력값을 여러 개의 작은 블록으로 나눈다.</li>
+                                            <li>각각의 블록을 각각의 S-box에 입력해 Subtitution Chiper의 과정을 거치게 만든다.</li>
+                                            <li>S-box를 이용해 대치시킨 것을 P-box를 이용해 Permutation Chiper의 과정을 거치게 만든다.</li>
+                                            <li>이 과정을 암호화, 복호화가 끝날때까지 반복한다.</li>
+                                        </ol>
+                                    </li>
                                 </ul>
                             </dd>
                         </dl>
+                    </p>
+                    <p>
+                        <dl>
+                            <dt>블록 암호의 구현과 관련하여 고려해야 할 사항들</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt>블록의 크기와 키의 길이</dt>
+                                            <dd>블록의 크기가 클수록, 키의 길이가 길수록 더 강력한 보안체계를 만들 수 있지만, 그만큼 암호화, 복호화의 속도는 느려지게 된다. 그렇기 때문에 합리적인 크기와 길이를 취해야 하며, 현재 128비트가 크기와 길이에 대한 합리적인 값으로 여겨지고 있다.</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>라운드 수</dt>
+                                            <dd>라운드 역시 그 수가 많을수록 보안은 더 강력해질 것이다. 하지만 특정 시점부터는 효율에 대한 유효한 차이가 발생하지 않을 것이기에 적절한 라운드 수를 취해 적절한 효율을 가지도록 해야 할 것이다. 현재 라운드 수는 16이 전형적이다.</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>서브키 생성 알고리즘과 라운드 함수</dt>
+                                            <dd>복잡할수록 암호 해독이 어려워진다. 소요 시간이 길어질 뿐더러, 복잡할수록 그 관계를 파악하기 힘들기 때문이다.</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </p>
+                    <p>
+                        블록 암호에 대한 공격
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Differential Cryptanalysis(차분 분석법)</dt>
+                                    <dd>두 개의 서로 다른 평문들을 이용해 이를 암호문으로 변화했을 때, 이 암호문들의 비트의 차이를 이용해 암호화에 사용되는 키를 찾아내는 방법이다. 즉, 평문이 암호문으로 변환될 때, 어떻게 변하는지를 파악하여 암호를 해독하는 방법이라 할 수 있다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Linear Cryptanalysis(선형 분석)</dt>
+                                    <dd>암호 알고리즘 내부의 선형적 관계를 찾거나, 혹은 비선형적인 구조를 근사를 이용해 선형화시킴으로써 암호화 키를 찾는 방법이다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Exhaustive key search(전수 공격법)</dt>
+                                    <dd>암호화하는 과정에서 일어날 수 있는 모든 경우에 대해 조사하는 방법이다. 전수 조사의 개념과 유사하게 생각하면 된다. <del>난 그리고 디피, 헬만이 싫다</del></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Statistical analysis(통계적 분석)</dt>
+                                    <dd>통계적인 자료를 이용하여 분석하는 방법이다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Mathematical analysis(수학적 분석)</dt>
+                                    <dd>암호 알고리즘을 분석하다보면 특정 수학 공식이 도출되게 된다. 이 점을 고려하여, 수학적인 이론을 이용해서 암호를 해독하고자 하는 방법이다.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>현대 스트림 암호</h3>
+                    <p>
+                        개요
                     </p>
                 </div>
             </div>
